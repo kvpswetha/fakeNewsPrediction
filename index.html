@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+<style>
+body {
+  /*font-family: Arial, Helvetica, sans-serif;*/
+  background-image: url(/static/bg1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif;
+}
+/*form {border: 3px solid #f1f1f1;}*/
+
+input[type=text] {
+ width: 100%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ display: inline-block;
+ border: 1px solid #ccc;
+ box-sizing: border-box;
+}
+
+button {
+ background-color: #e40531;
+ color: white;
+ padding: 14px 20px;
+ margin: 8px 0;
+ border: none;
+ cursor: pointer;
+ width: 100%;
+}
+
+button:hover {
+ opacity: 0.8;
+}
+
+.cancelbtn {
+ width: auto;
+ padding: 10px 18px;
+ background-color: #f44336;
+}
+
+.imgcontainer {
+ text-align: center;
+ margin: 24px 0 12px 0;
+}
+
+img.avatar {
+ width: 20%;
+ border-radius: 50%;
+}
+
+.container {
+ padding: 16px;
+}
+
+span.psw {
+ float: right;
+ padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+ span.psw {
+    display: block;
+    float: none;
+ }
+ .cancelbtn {
+    width: 100%;
+ }
+}
+</style>
+</head>
+<body>
+
+<h2 style="margin-top: 6%;font-size: 309%; letter-spacing: 5px"><center style="color: black;">Fake News Detector</center></h2>
+<form id="form_pred" class="contact100-form validate-form" method="post" action="/api" style="width: 50%; margin-left: 25%; margin-top: 5%;">
+  <div class="container">
+   <label for="title"><b>Title</b></label>
+   <input type="text" placeholder="Enter Title" name="title" required>
+   
+   <label for="maintext"><b>Text</b></label>
+   <input type="text" placeholder="Enter Whole Text" name="maintext" required>
+
+   <button type="submit" style="width: 30%; margin-left: 35%; margin-top: 10%;">Predict</button>
+ </div>
+
+</form>
+
+</body>
+</html>
